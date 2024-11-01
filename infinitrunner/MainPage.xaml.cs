@@ -2,23 +2,47 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	bool estaMorto = false;
+	bool estaPulando = false;
+	const int tempoEntreFrames = 25;
+	int velocidade1 = 0;
+    int velocidade2 = 0;
+	int velocidade3 = 0;
+	int velocidade = 0;
+	int larguraJanela = 0;
+	int alturaJanela = 0;
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    protected override void OnSizeAllocated(double w, double h)
+    {
+       base.OnSizeAllocated(w, h);
+	   CorrigeTamanhoCenerio(w, h);
+	   CalculaVelocidade(w);
+    }
+  
+  void CalculaVelocidade(double w)
+  {
+	velocidade1 = (int)(w* 0.001);
+	velocidade2 = (int)(w* 0.004);
+	velocidade3 = (int)(w* 0.008);
+	velocidade = (int)(w* 0.01);
+  }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+  void CorrigeTamanhoCenerio(double w, double h)
+  {
+	foreach (var A in HSLayer1.Children)
+	(A as Image).WidthRequest = w;
+	foreach (var A in HSLayer2.Children)
+	(A as Image).WidthRequest = w;
+	foreach (var A in HSLayer3.Children)
+	(A as Image).WidthRequest = w;
+	foreach (var A in HSLayerChao.Children)
+	(A as Image).WidthRequest = w;
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+	HSLayer1.WidthRequest = w;
+	HSLayer2.WidthRequest = w;
+	HSLayer3.WidthRequest = w;
+	HSLayerChao.WidthRequest = w;
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+  }
 }
 

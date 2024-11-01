@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="infinitrunner.MainPage">
+
+    <Grid>
+              <Image  Source="fundo1.png"
+                        Aspect="AspectFill"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"/>
+
+                <Image  Source="fundo2.png"
+                        Margin="10"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Start"/>
+                  
+                <Image  Source="fundo3.png"
+                        Margin="10"
+                        HeightRequest="150"
+                        HorizontalOptions="Start"
+                        VerticalOptions="End"/>  
+                
+                <Image  Source="chao.png"
+                        HeightRequest="300"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"/>
+        </Grid>
+
+</ContentPage>

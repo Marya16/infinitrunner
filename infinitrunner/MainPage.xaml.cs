@@ -1,5 +1,4 @@
-﻿using Microsoft.UI.Xaml.Controls;
-
+﻿
 namespace infinitrunner;
 
 public partial class MainPage : ContentPage
@@ -13,13 +12,13 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
-	
+	 public Player player;
 
 	public MainPage()
 	{
 		InitializeComponent();
 		player = new Player(imgPlayer);
-		Player.Run();
+		player.Run();
 
 	}
 
@@ -87,7 +86,7 @@ public partial class MainPage : ContentPage
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
-			Player.Desenha();
+			player.Desenha();
 			await Task.Delay(tempoEntreFrames);
 		}
 	}

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="infinitrunner.MainPage">
+             x:Class="infinitrunner.MainPage"
+             Shell.NavBarIsVisible="False">
 
        <Grid>
               <HorizontalStackLayout x:Name="HSLayer1">
@@ -42,17 +43,25 @@
               </HorizontalStackLayout>
 
               <HorizontalStackLayout x:Name="HSLayerChao">
-                     <Image Source="chao.png"
+                     <Image Source="chao1.png"
                             Aspect="Fill"
                             HorizontalOptions="Fill"/>
-                     <Image Source="chao.png"
+                     <Image Source="chao1.png"
                             Aspect="Fill"
                             HorizontalOptions="Fill"/>
-                     <Image Source="chao.png"
+                     <Image Source="chao1.png"
                             Aspect="Fill"
-                            HorizontalOptions="Fill"/>
+                            HorizontalOptions="Fill"/>      
 
               </HorizontalStackLayout>
+
+              <Image  Source="player01.png"
+                        x:Name="imgPlayer"
+                        Margin="10"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Start"/>
+                
        </Grid>
 
 </ContentPage>

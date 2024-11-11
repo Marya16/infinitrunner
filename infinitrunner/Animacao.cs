@@ -10,6 +10,7 @@ public class Animacao
     bool parado = true;
     int frameAtual = 1;
     protected Image compImage;
+   
 
     public Animacao (Image a)
     {

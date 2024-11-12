@@ -1,7 +1,10 @@
+using FFImageLoading.Maui;
+
 namespace infinitrunner;
 
 public class Animacao
 {
+
     protected List<String> animacao1 = new List<String>();
     protected List<String> animacao2 = new List<String>();
     protected List<String> animacao3 = new List<String>();
@@ -9,10 +12,10 @@ public class Animacao
     protected int animacaoAtiva = 1;
     bool parado = true;
     int frameAtual = 1;
-    protected Image compImage;
+    protected CachedImageView compImage;
    
 
-    public Animacao (Image a)
+    public Animacao (CachedImageView a)
     {
         compImage = a;
     }

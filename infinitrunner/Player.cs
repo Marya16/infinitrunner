@@ -1,14 +1,16 @@
+using FFImageLoading.Maui;
+
 namespace infinitrunner;
 
-public delegate void CallBack();
+
 public class Player : Animacao
 {
-    public Player (Image a):base (a)
+    public Player (CachedImageView a):base (a)
     {
         for (int i = 1; i <= 24; ++i)
-            animacao1.Add($"player {i.ToString("D2")}.png");
+            animacao1.Add($"player{i.ToString("D2")}.png");
         for (int i = 1; i <= 27; ++i)
-            animacao2.Add($"dead {i.ToString("D2")}.png");
+            animacao2.Add($"dead{i.ToString("D2")}.png");
 
             SetAnimacaoAtiva(1);
     }

@@ -3,6 +3,7 @@ namespace infinitrunner;
 
 public partial class MainPage : ContentPage
 {
+	Player player;
 	bool estaMorto = false;
 	bool estaPulando = false;
 	const int tempoEntreFrames = 25;
@@ -12,7 +13,7 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
-	 public Player player;
+	
 
 	public MainPage()
 	{

@@ -64,6 +64,7 @@
                                    WidthRequest="100"
                                    VerticalOptions="End"
                                    Margin="10,0,0,110"
+                                   Aspect="Fill"
                                    HorizontalOptions="Start"/>
                 
        </Grid>

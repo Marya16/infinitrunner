@@ -6,6 +6,10 @@
              Shell.NavBarIsVisible="False">
 
        <Grid>
+       <Grid.GestureRecognizers>
+                         <TapGestureRecognizer Tapped="OnGridTapped"/>
+       </Grid.GestureRecognizers>
+
               <HorizontalStackLayout x:Name="HSLayer1">
                      <Image Source="fundo1.png"
                             VerticalOptions="Fill"
@@ -56,10 +60,10 @@
 
               </HorizontalStackLayout>
 
-              <ff:CachedImageView  CacheType="All"
+              <ff:CachedImageView  x:Name="imgPlayer"
+                                   CacheType="All"
                                    CacheDuration="365" 
                                    Source="player01.png"
-                                   x:Name="imgPlayer"
                                    HeightRequest="100"
                                    WidthRequest="100"
                                    VerticalOptions="End"

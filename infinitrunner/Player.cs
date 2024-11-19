@@ -1,4 +1,5 @@
 using FFImageLoading.Maui;
+using Microsoft.Maui.Platform;
 
 namespace infinitrunner;
 
@@ -25,5 +26,17 @@ public class Player : Animacao
     {
         loop=false;
         SetAnimacaoAtiva(2);
+    }
+    public void MoveY(int S)
+    {
+        ImageView.TranslationY += S;
+    }
+    public double GetY()
+    {
+        return ImageView.TranslationY;
+    }
+    public void SetY(double a)
+    {
+        ImageView.TranslationY = a;
     }
 }  

@@ -70,6 +70,23 @@
                                    Margin="10,0,0,110"
                                    Aspect="Fill"
                                    HorizontalOptions="Start"/>
+
+                            <Image Source="queijo.png"  
+                                   x:Name="imgInimigo1" 
+                                   VerticalOptions="End"/>
+
+                            <Image Source="leao.png"  
+                                   x:Name="imgInimigo2" 
+                                   VerticalOptions="End"/>
+
+                            <Image Source="barata.png"  
+                                   x:Name="imgInimigo3" 
+                                   VerticalOptions="End"/>
+
+                            <Image Source="crocodilo.png"  
+                                   x:Name="imgInimigo4" 
+                                   VerticalOptions="End"/>                     
+
                 
        </Grid>
 

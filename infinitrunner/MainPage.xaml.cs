@@ -4,6 +4,7 @@ namespace infinitrunner;
 public partial class MainPage : ContentPage
 {
 	Player player;
+	Inimigos inimigos;
 	bool estaMorto = false;
 	bool estaPulando = false;
 	const int tempoEntreFrames = 25;
@@ -37,6 +38,11 @@ public partial class MainPage : ContentPage
 		base.OnSizeAllocated(w, h);
 		CorrigeTamanhoCenario(w, h);
 		CalculaVelocidade(w);
+		inimigos= new Inimigos(-w);
+		inimigos.Add(new Inimigos(imgInimigo1));
+		inimigos.Add(new Inimigos(imgInimigo2));
+		inimigos.Add(new Inimigos(imgInimigo3));
+		inimigos.Add(new Inimigos(imgInimigo4));
 	}
 
 	void CalculaVelocidade(double w)
@@ -96,6 +102,8 @@ public partial class MainPage : ContentPage
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
+			if (inimigos!=null)
+			    inimigos.Desenha(velocidade);
 			if(!estaPulando && !estaNoAr)
 		    {
 				AplicaGravidade();

@@ -73,19 +73,35 @@
 
                             <Image Source="queijo.png"  
                                    x:Name="imgInimigo1" 
-                                   VerticalOptions="End"/>
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,110"
+                                   Aspect="Fill"
+                                   HorizontalOptions="Fill"
+                                   HeightRequest="125"/>
 
                             <Image Source="leao.png"  
                                    x:Name="imgInimigo2" 
-                                   VerticalOptions="End"/>
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,110"
+                                   Aspect="Fill"
+                                   HorizontalOptions="Fill"
+                                   HeightRequest="125"/>
 
                             <Image Source="barata.png"  
                                    x:Name="imgInimigo3" 
-                                   VerticalOptions="End"/>
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,110"
+                                   Aspect="Fill"
+                                   HorizontalOptions="Fill"
+                                   HeightRequest="125"/>
 
                             <Image Source="crocodilo.png"  
                                    x:Name="imgInimigo4" 
-                                   VerticalOptions="End"/>                     
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,110"
+                                   Aspect="Fill"
+                                   HorizontalOptions="Fill"
+                                   HeightRequest="125"/>                    
 
                 
        </Grid>

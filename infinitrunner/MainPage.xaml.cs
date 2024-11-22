@@ -39,10 +39,10 @@ public partial class MainPage : ContentPage
 		CorrigeTamanhoCenario(w, h);
 		CalculaVelocidade(w);
 		inimigos= new Inimigos(-w);
-		inimigos.Add(new Inimigos(imgInimigo1));
-		inimigos.Add(new Inimigos(imgInimigo2));
-		inimigos.Add(new Inimigos(imgInimigo3));
-		inimigos.Add(new Inimigos(imgInimigo4));
+		inimigos.Add(new Inimigo(imgInimigo1));
+		inimigos.Add(new Inimigo(imgInimigo2));
+		inimigos.Add(new Inimigo(imgInimigo3));
+		inimigos.Add(new Inimigo(imgInimigo4));
 	}
 
 	void CalculaVelocidade(double w)
